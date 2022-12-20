@@ -12,8 +12,11 @@
                         <input type="text" class="form-control" id="id_seach">
                     </div>
                     <div class="d-grid gap-2 col-6 mx-auto">
-                      <button class="btn btn-primary" type="button">Buscar</button>
+                        <button class="btn btn-primary" type="button">Buscar</button>
                     </div>
+                    @foreach ($part_list as $parts)
+                        <p>Peça: {{ $parts->name }}</p>
+                    @endforeach
                 </form>
             </div>
         </div>
