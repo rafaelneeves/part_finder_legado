@@ -12,4 +12,19 @@ class PartController extends Controller
         $part_list = Part::get();
         return view('welcome', ['part_list' =>  $part_list,]);
     }
+
+    // public function partList(Request $request)
+    // {
+    //     $part = $request->part_list;
+
+    //     dd($part);
+
+    //     if ($part) {
+    //         $part_list = Part::where('name', $request->part_list)->get();
+    //         return view('welcome', compact('part_list'));
+    //     } else {
+    //         $part_list = Part::get();
+    //         return view('welcome', ['part_list' =>  $part_list,]);
+    //     }
+    // }
 }

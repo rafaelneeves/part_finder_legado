@@ -8,6 +8,8 @@
                     Localizador de Peças
                 </h1>
                 <form>
+                    <form method="POST" action="{{route('index')}}">
+                        @csrf
                     <div class="mb-3">
                         <input type="text" class="form-control" id="id_seach">
                     </div>
