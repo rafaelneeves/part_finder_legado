@@ -8,13 +8,13 @@
                     Localizador de Peças
                 </h1>
                 <form>
-                    <form method="POST" action="{{route('index')}}">
+                    <form method="GET" action="{{route('index')}}">
                         @csrf
                     <div class="mb-3">
-                        <input type="text" class="form-control" id="id_seach">
+                        <input type="text" class="form-control" id="id_seach" name="search">
                     </div>
                     <div class="d-grid gap-2 col-6 mx-auto">
-                        <button class="btn btn-primary" type="button">Buscar</button>
+                        <button class="btn btn-primary" type="submit">Buscar</button>
                     </div>
                     @foreach ($part_list as $parts)
                         <p>Peça: {{ $parts->name }}</p>

@@ -13,14 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-//Route::get('/', [App\Http\Controllers\PartController::class, 'partList']);
-
-Route::post('/', [App\Http\Controllers\PartController::class, 'partList'])->name('index');
-
+Route::get('/', [App\Http\Controllers\PartController::class, 'partList'])->name('index');
 
 Auth::routes();
 
