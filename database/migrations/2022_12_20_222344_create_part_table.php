@@ -13,9 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('parts');
+
         Schema::create('parts', function (Blueprint $table) {
             $table->id();
             $table->string('number_part');
+            $table->integer('amount');
+            $table->string('price');
             $table->string('name');
             $table->timestamps();
         });
