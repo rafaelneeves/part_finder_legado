@@ -15,7 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\PartController::class, 'partList'])->name('index');
 
-
+// Admin
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/new', [App\Http\Controllers\AdminPartController::class, 'new'])->name('new');
+Route::get('/list', [App\Http\Controllers\AdminPartController::class, 'list'])->name('list');
+Route::get('/edit', [App\Http\Controllers\AdminPartController::class, 'edit'])->name('edit');
+
